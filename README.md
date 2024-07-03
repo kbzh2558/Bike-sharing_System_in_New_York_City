@@ -1,6 +1,6 @@
 # 🚲🗽Bike-sharing System in New York City
 ![](https://img.shields.io/badge/python-3.10%2B-blue?logo=Python)
-![Gurobi Version](https://img.shields.io/badge/gurobi-9.5.2-blue?logo=gurobi&logoColor=white)
+![Gurobi Version](https://img.shields.io/badge/gurobi-11.0.0-blue?logo=gurobi&logoColor=red)
 
 ⚡ Optimization in Balance between Demand Capturing and Cost Deployment ⚡
 
