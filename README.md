@@ -1,29 +1,23 @@
 # 🚲🗽Bike-sharing System in New York City
-## Optimization in Balance between Demand Capturing and Cost Deployment
-![Version](https://www.python.org/)
-[![Downloads](https://static.pepy.tech/badge/langgraph/month)](https://pepy.tech/project/langgraph)
-[![Open Issues](https://img.shields.io/github/issues-raw/langchain-ai/langgraph)](https://github.com/langchain-ai/langgraph/issues)
-[![](https://dcbadge.vercel.app/api/server/6adMQxSpJS?compact=true&style=flat)](https://discord.com/channels/1038097195422978059/1170024642245832774)
-[![Docs](https://img.shields.io/badge/docs-latest-blue)](https://langchain-ai.github.io/langgraph/)
+![](https://img.shields.io/badge/python-3.10%2B-blue?logo=Python)
 
-⚡ Building language agents as graphs ⚡
+⚡ Optimization in Balance between Demand Capturing and Cost Deployment ⚡
 
 > [!NOTE]
-> Looking for the JS version? Click [here](https://github.com/langchain-ai/langgraphjs) ([JS docs](https://langchain-ai.github.io/langgraphjs/)).
+> This project is built upon previous research done by scholars at HKUST. Click [here](https://doi.org/10.1145/2820783.2820837.).
 
 ## Overview
 
-[LangGraph](https://langchain-ai.github.io/langgraph/) is a library for building stateful, multi-actor applications with LLMs, used to create agent and multi-agent workflows. Compared to other LLM frameworks, it offers these core benefits: cycles, controllability, and persistence. LangGraph allows you to define flows that involve cycles, essential for most agentic architectures, differentiating it from DAG-based solutions. As a very low-level framework, it provides fine-grained control over both the flow and state of your application, crucial for creating reliable agents. Additionally, LangGraph includes built-in persistence, enabling advanced human-in-the-loop and memory features.
+Bike-sharing systems have emerged as a popular and sustainable mode of transportation in urban environments, offering an efficient means of travel for commuters and tourists alike. Understanding the dynamics of bike-sharing demand is crucial for optimizing resource allocation to ensure efficient service delivery and customer satisfaction. Building upon previous research conducted by scholars at the Hong Kong University of Science and Technology (HKUST), this project seeks to delve deeper into the transitional demands for bike-sharing stations in the vibrant landscape of New York City. Leveraging the dataset and preprocessing techniques established by prior researchers, our study aims to develop a simplified yet robust model capable of capturing the nuances of demand variations and customer patterns. Furthermore, this study goes beyond mere prediction by integrating an optimization model to determine the optimal number of bikes to deploy. Focusing on the week of August 16th to August 22nd, we aim to devise a strategy for resource allocation that maximizes efficiency and minimizes operational costs. In essence, this project bridges academic research and practical
+applications, offering a comprehensive framework for understanding and managing the transitional demands of bike-sharing stations in New York City. By leveraging insights from previous research and employing advanced analytical techniques, we aspire to contribute to the ongoing efforts to enhance the sustainability and accessibility of urban transportation systems.
 
-LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [Apache Beam](https://beam.apache.org/). The public interface draws inspiration from [NetworkX](https://networkx.org/documentation/latest/). LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
+### Key Techniques Used
 
-### Key Features
+- **Network Analysis**: Implement loops and conditionals in your apps.
+- **K-NN**: Automatically save state after each step in the graph. Pause and resume the graph execution at any point to support error recovery, human-in-the-loop workflows, time travel, and more.
+- **Regression**: Interrupt graph execution to approve or edit next action planned by the agent.
+- **Gurobi Optimization**: Stream outputs as they are produced by each node (including token streaming).
 
-- **Cycles and Branching**: Implement loops and conditionals in your apps.
-- **Persistence**: Automatically save state after each step in the graph. Pause and resume the graph execution at any point to support error recovery, human-in-the-loop workflows, time travel and more.
-- **Human-in-the-Loop**: Interrupt graph execution to approve or edit next action planned by the agent.
-- **Streaming Support**: Stream outputs as they are produced by each node (including token streaming).
-- **Integration with LangChain**: LangGraph integrates seamlessly with [LangChain](https://github.com/langchain-ai/langchain/) and [LangSmith](https://docs.smith.langchain.com/) (but does not require them).
 ### Step-by-step Breakdown
 
 1. <details>
@@ -85,14 +79,4 @@ LangGraph is inspired by [Pregel](https://research.google/pubs/pub37252/) and [A
    </details>
 
 
-## Documentation
 
-* [Tutorials](https://langchain-ai.github.io/langgraph/tutorials/): Learn to build with LangGraph through guided examples.
-* [How-to Guides](https://langchain-ai.github.io/langgraph/how-tos/): Accomplish specific things within LangGraph, from streaming, to adding memory & persistence, to common design patterns (branching, subgraphs, etc.), these are the place to go if you want to copy and run a specific code snippet.
-* [Conceptual Guides](https://langchain-ai.github.io/langgraph/concepts/): In-depth explanations of the key concepts and principles behind LangGraph, such as nodes, edges, state and more.
-* [API Reference](https://langchain-ai.github.io/langgraph/reference/graphs/): Review important classes and methods, simple examples of how to use the graph and checkpointing APIs, higher-level prebuilt components and more.
-* [Cloud (beta)](https://langchain-ai.github.io/langgraph/cloud/): With one click, deploy LangGraph applications to LangGraph Cloud.
-
-## Contributing
-
-For more information on how to contribute, see [here](https://github.com/langchain-ai/langgraph/blob/main/CONTRIBUTING.md).
