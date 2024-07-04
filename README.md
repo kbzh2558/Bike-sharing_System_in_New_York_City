@@ -5,7 +5,7 @@
 ⚡ Optimization in Balance between Demand Capturing and Cost Deployment ⚡
 
 > [!NOTE]
-> This project is built upon previous research done by scholars at HKUST. Click [here](https://doi.org/10.1145/2820783.2820837.).
+> This project is carried out by students of Desautels Faculty of Management at McGill University under the supervision of Professor Rim Hariss. It was built upon previous research done by scholars at HKUST. Click [here](https://doi.org/10.1145/2820783.2820837.).
 
 ## Overview
 
