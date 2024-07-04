@@ -42,7 +42,7 @@ applications, offering a comprehensive framework for understanding and managing 
 4. <details>
     <summary>Multiple Regression.</summary>
 
-      - considers the hour of the day and day of the week for temporal patterns and incorporates meteorological features: weather type, temperature, and wind speed.
+      - considered the hour of the day and day of the week for temporal patterns and incorporates meteorological features: weather type, temperature, and wind speed.
 
       - autocorrelation found from the Watson test (Durbin-Watson statistic of 0.781) to assess autocorrelation:
         - a. Persistent seasonality observed in residuals (ACF & PACF), despite attempts to decompose, AND
@@ -52,23 +52,21 @@ applications, offering a comprehensive framework for understanding and managing 
 5. <details>
     <summary>ARIMA.</summary>
 
-    - When we compile the graph, we turn it into a LangChain [Runnable](https://python.langchain.com/v0.2/docs/concepts/#runnable-interface), which automatically enables calling `.invoke()`, `.stream()` and `.batch()` with your inputs
-    - We can also optionally pass checkpointer object for persisting state between graph runs, and enabling memory, human-in-the-loop workflows, time travel and more. In our case we use `MemorySaver` - a simple in-memory checkpointer
+    - we used auto `ARIMA` to explore the remaining time dependency correlations in the residuals. **NOTE:** `ARIMA` struggles to capture high peaks in time series accurately.
+
     </details>
 
 6. <details>
    <summary>Gurobi Optimization.</summary>
 
-    1. LangGraph adds the input message to the internal state, then passes the state to the entrypoint node, `"agent"`.
-    2. The `"agent"` node executes, invoking the chat model.
-    3. The chat model returns an `AIMessage`. LangGraph adds this to the state.
-    4. Graph cycles the following steps until there are no more `tool_calls` on `AIMessage`:
+    = we used `gurobi` to implement our optimization model.
+    - the detailed documentation and methods for `gurobi` usage can be found [here](https://www.gurobi.com/).
+    - the optimization formulation was in essence a linear programming model:
 
-        - If `AIMessage` has `tool_calls`, `"tools"` node executes
-        - The `"agent"` node executes again and returns `AIMessage`
-
-    5. Execution progresses to the special `END` value and outputs the final state.
-    And as a result, we get a list of all our chat messages as output.
+        1. with decision variables keeping track of the transitional flow of bikes between clusters to find the optimal number of initial bike deployments.
+        2. the parameters were calculated from the abovementioned prediction models.
+        3. the `objective function` was imitating the techniques of `LASSO Regression` by introducing a regularization term `lamda` into the formula, seeking to minimize the mismatch between the estimated demand and the number of bikes              checked out at each cluster while penalizing attempts to overly increase the number of initial bikes needed, thereby aligning supply with anticipated demand.
+        4. The optimal λ = 6 was selected through trials and errors and sensitivity analysis on the magnitude of changes in demand mismatch.
    </details>
 
 
