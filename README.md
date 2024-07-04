@@ -65,8 +65,8 @@ applications, offering a comprehensive framework for understanding and managing 
 
         - a. with decision variables keeping track of the transitional flow of bikes between clusters to find the optimal number of initial bike deployments.
         - b. the parameters were calculated from the abovementioned prediction models.
-        - c. the `objective function` was imitating the techniques of `LASSO Regression` by introducing a regularization term `lamda` into the formula, seeking to minimize the mismatch between the estimated demand and the number of bikes              checked out at each cluster while penalizing attempts to overly increase the number of initial bikes needed, thereby aligning supply with anticipated demand.
-        - d. The optimal λ = 6 was selected through trials and errors and sensitivity analysis on the magnitude of changes in demand mismatch.
+        - c. the `objective function` was imitating the techniques of `LASSO Regression` by introducing a regularization term `lamda (λ)` into the formula, seeking to minimize the mismatch between the estimated demand and the number of bikes              checked out at each cluster while penalizing attempts to overly increase the number of initial bikes needed, thereby aligning supply with anticipated demand.
+        - d. The optimal `λ` = 6 was selected through trials and errors and sensitivity analysis on the magnitude of changes in demand mismatch.
    </details>
 
 
