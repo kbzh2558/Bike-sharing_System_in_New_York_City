@@ -59,7 +59,7 @@ applications, offering a comprehensive framework for understanding and managing 
 6. <details>
    <summary>Gurobi Optimization.</summary>
 
-    = we used `gurobi` to implement our optimization model.
+    - we used `gurobi` to implement our optimization model.
     - the detailed documentation and methods for `gurobi` usage can be found [here](https://www.gurobi.com/).
     - the optimization formulation was in essence a linear programming model:
 
