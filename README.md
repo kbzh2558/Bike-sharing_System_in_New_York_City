@@ -63,10 +63,10 @@ applications, offering a comprehensive framework for understanding and managing 
     - the detailed documentation and methods for `gurobi` usage can be found [here](https://www.gurobi.com/).
     - the optimization formulation was in essence a linear programming model:
 
-        1. with decision variables keeping track of the transitional flow of bikes between clusters to find the optimal number of initial bike deployments.
-        2. the parameters were calculated from the abovementioned prediction models.
-        3. the `objective function` was imitating the techniques of `LASSO Regression` by introducing a regularization term `lamda` into the formula, seeking to minimize the mismatch between the estimated demand and the number of bikes              checked out at each cluster while penalizing attempts to overly increase the number of initial bikes needed, thereby aligning supply with anticipated demand.
-        4. The optimal λ = 6 was selected through trials and errors and sensitivity analysis on the magnitude of changes in demand mismatch.
+        - 1. with decision variables keeping track of the transitional flow of bikes between clusters to find the optimal number of initial bike deployments.
+        - 2. the parameters were calculated from the abovementioned prediction models.
+        - 3. the `objective function` was imitating the techniques of `LASSO Regression` by introducing a regularization term `lamda` into the formula, seeking to minimize the mismatch between the estimated demand and the number of bikes              checked out at each cluster while penalizing attempts to overly increase the number of initial bikes needed, thereby aligning supply with anticipated demand.
+        - 4. The optimal λ = 6 was selected through trials and errors and sensitivity analysis on the magnitude of changes in demand mismatch.
    </details>
 
 
