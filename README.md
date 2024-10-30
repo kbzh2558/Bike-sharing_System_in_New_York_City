@@ -25,7 +25,7 @@ applications, offering a comprehensive framework for understanding and managing 
    </details>
 
 2. <details>
-    <summary>K-NN.</summary>
+    <summary>K-Means.</summary>
 
     - we used the `sktlearn` package to perform unsupervised learning on the dataset to group stations together. Detailed rationales can be found in the paper. 
    </details>
